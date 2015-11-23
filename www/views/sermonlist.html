@@ -1,0 +1,20 @@
+<ion-view view-title="Daily Verse List">
+<ion-content>
+<ion-list>
+
+<div class="col-md-12 secondary" ng-repeat="list in lists" >
+	<div class="panel panel-primary" >
+			<a href="#/app/versetoday/{{list.ID}}">	
+			<div class="panel-heading" >
+				<h3 class="panel-title " style="text-align:center;font-weight:bold;" ng-bind-html="list.title">
+				 {{ list.title }}
+				 </h3>
+			</div> 
+		</a>
+	</div>
+	
+	<hr>
+</div>
+</ion-list>
+</ion-content>
+</ion-view>
