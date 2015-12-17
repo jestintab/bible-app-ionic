@@ -1,9 +1,5 @@
-// Ionic Starter App
+// Daily verse
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
 var app= angular.module('brc', ['ionic', 'brc.controllers','angular-loading-bar', 'ngAnimate'])
 // .config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
 //     cfpLoadingBarProvider.spinnerTemplate = '<div class="whirly-loader">Loading…</div>';
@@ -35,7 +31,7 @@ var app= angular.module('brc', ['ionic', 'brc.controllers','angular-loading-bar'
   })
 
   .state('app.tsermon', {
-    url: '/tsermon',
+    url: '/',
     views: {
       'menuContent': {
         templateUrl: 'views/tsermon.html',
@@ -76,5 +72,5 @@ var app= angular.module('brc', ['ionic', 'brc.controllers','angular-loading-bar'
 
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/sermon');
+  $urlRouterProvider.otherwise('/app/');
 });
