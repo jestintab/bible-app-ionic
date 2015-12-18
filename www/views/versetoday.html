@@ -1,11 +1,11 @@
 <ion-view view-title="Verse for the day">
-  <ion-content ng-controller='VersetodayController'>
-    
+<ion-content ng-controller='VersetodayController'>
 
-    <div class="col-md-12 secondary" >
+
+<div class="col-md-12 secondary" >
 	<div class="panel panel-primary" >
 		<div class="panel-heading">
-			<h3 class="panel-title " style="text-align:center;font-weight:bold;"> {{ verses.title }} </h3>
+			<h3 class="panel-title " style="text-align:center;font-weight:bold;" ng-bind-html="verses.title"> {{ verses.title }} </h3>
 		</div> 
 	</div>
 	<table class="table table-bordered" border="2">
@@ -19,9 +19,9 @@
 		</tr>
 		<tr style="background:#fff;">
 			<td colspan="2"> 
-			<span ng-bind-html="verses.content" style="text-align:justify;">
-				{{ verses.content }}
-			<span style="color:#f4a227">  </span>
+				<span ng-bind-html="verses.content" style="text-align:justify;">
+					{{ verses.content }}
+					<span style="color:#f4a227">  </span>
 
 				</span>
 			</td> 
@@ -30,7 +30,7 @@
 		<tr  style="background:#AFEEEE;"  >
 			<td colspan="2">
 				<span style="text-align:justify;" >
-				<i>{{verses.custom_post.Passage2}}</i><span style="float:right;">{{verses.custom_post.KeyVerse1}}</span>
+					<i>{{verses.custom_post.Passage2}}</i><span style="float:right;">{{verses.custom_post.KeyVerse1}}</span>
 				</span>
 			</td>
 		</tr>
@@ -38,5 +38,5 @@
 	<hr>
 </div>
 
-  </ion-content>
+</ion-content>
 </ion-view>

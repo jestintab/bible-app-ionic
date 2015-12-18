@@ -1,0 +1,41 @@
+<ion-view view-title="Today's Bible Reading Card">
+  <ion-content>
+
+    <div class="col-md-12 secondary" ng-repeat="list in lists" >
+	<div class="panel panel-primary" >
+		<div class="panel-heading">
+			<h3 class="panel-title " style="text-align:center;font-weight:bold;" ng-bind-html="list.title"> {{ list.title }}</h3>
+		</div> 
+	</div>
+	<table class="table table-bordered" border="2">
+		<tr class="warning"> 
+			<td> Today's Reading: &nbsp;<strong>{{list.custom_post.KeyVerse1}}</strong> </td>
+			<td style="text-align:center;"> {{ list.date |  date:"MMMM dd, yyyy"}}</td>
+		</tr>
+
+		<tr class="success" >
+			<td colspan="2"> <span style="text-align:justify;" ><i>{{list.custom_post.Passage1}}</i> <span style="float:right;">{{list.custom_post.KeyVerse1}}</span> </span></td>
+		</tr>
+		<tr style="background:#fff;">
+			<td colspan="2"> 
+			<span ng-bind-html="list.content" style="text-align:justify;">
+				{{ list.content }}
+			<span style="color:#f4a227">  </span>
+
+				</span>
+			</td> 
+		</tr>
+
+		<tr  style="background:#AFEEEE;"  >
+			<td colspan="2">
+				<span style="text-align:justify;" >
+				<i>{{list.custom_post.Passage2}}</i><span style="float:right;">{{list.custom_post.KeyVerse1}}</span>
+				</span>
+			</td>
+		</tr>
+	</table>
+	<hr>
+</div>
+
+  </ion-content>
+</ion-view>
